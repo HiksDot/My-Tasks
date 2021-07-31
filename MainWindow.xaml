@@ -1,0 +1,119 @@
+﻿<Window x:Class="My_Tasks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:My_Tasks"
+        xmlns:viewModel="clr-namespace:My_Tasks.ChangeView.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="600" 
+        Width="950"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <viewModel:MainView></viewModel:MainView>
+    </Window.DataContext>
+    <Border Background="#272538" CornerRadius="20">
+
+        <Grid>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="890"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Style="{StaticResource CloseButtonTheme}"
+                    Grid.Column="2"
+                    Margin="0,5,7,5"
+                    Name="ExitButton"
+                    Click="ExitFunc">
+                </Button>
+
+                <Button Style="{StaticResource ResizeButtonTheme}"
+                    Grid.Column="1"
+                    Margin="5,5,0,5"
+                    Name="ReduceButton"
+                    Click="ReduceFunc">
+                    <Image Source="C:\Users\Hiks\source\repos\My Tasks\Images\_Reduce.png" />
+                </Button>
+            </Grid>
+            
+
+
+            <TextBlock
+                MouseDown="Grid_MouseDown"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="20,0,0,0"
+                FontSize="20"
+                FontFamily="/Fonts/#Convergence"
+                Text="My Tasks"/>
+
+            <Border BorderThickness="0 0 0 1"
+                    BorderBrush="#201f2e"
+                    Grid.ColumnSpan="2"/>
+            
+            <Border BorderThickness="0 0 1 0"
+                    BorderBrush="#201f2e"
+                    Grid.Row="1"/>
+            
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="School"
+                         Foreground="White"
+                         FontFamily="/Fonts/#Convergence"
+                         FontSize="14"
+                         Style="{StaticResource RadioButtonTheme}" 
+                         Height="40"
+                         Command="{Binding SchoolViewCommand}"/>
+                <RadioButton Content="Coding"
+                         Foreground="White"
+                         FontFamily="/Fonts/#Convergence"
+                         FontSize="14"
+                         Style="{StaticResource RadioButtonTheme}" 
+                         Height="40"
+                         Command="{Binding CodingViewCommand}"/>
+                <RadioButton Content="Projects"
+                         Foreground="White"
+                         FontFamily="/Fonts/#Convergence"
+                         FontSize="14"
+                         Style="{StaticResource RadioButtonTheme}" 
+                         Height="40"
+                         Command="{Binding ProjectsViewCommand}"/>
+                <RadioButton Content="Daily"
+                         Foreground="White"
+                         FontFamily="/Fonts/#Convergence"
+                         FontSize="14"
+                         Style="{StaticResource RadioButtonTheme}" 
+                         Height="40"
+                         Command="{Binding DailyViewCommand}"/>
+            </StackPanel>
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+
+        </Grid>
+        
+    </Border>
+    
+</Window>
+
+    

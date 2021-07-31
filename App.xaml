@@ -1,0 +1,39 @@
+﻿<Application x:Class="My_Tasks.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:My_Tasks"
+             xmlns:viewModel="clr-namespace:My_Tasks.ChangeView.ViewModel"
+             xmlns:view="clr-namespace:My_Tasks.ChangeView.View"
+
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/RadioButtonTheme.xaml" />
+                <ResourceDictionary Source="Themes/CloseButtonTheme.xaml" />
+                <ResourceDictionary Source="Themes/ResizeButtonTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:SchoolView}">
+                <view:SchoolView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:CodingView}">
+            <view:CodingView/>
+            </DataTemplate>
+                
+            <DataTemplate DataType="{x:Type viewModel:DailyView}">
+                <view:DailyView/>
+            </DataTemplate>
+                
+            <DataTemplate DataType="{x:Type viewModel:ProjectsView}">
+                <view:ProjectsView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+
+
+
+
