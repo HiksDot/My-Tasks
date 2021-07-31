@@ -36,6 +36,18 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Themes\EnterButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\TimeBoxTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\DateBoxTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\TextBoxTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\CloseButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>

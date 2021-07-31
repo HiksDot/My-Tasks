@@ -12,6 +12,10 @@
                 <ResourceDictionary Source="Themes/RadioButtonTheme.xaml" />
                 <ResourceDictionary Source="Themes/CloseButtonTheme.xaml" />
                 <ResourceDictionary Source="Themes/ResizeButtonTheme.xaml" />
+                <ResourceDictionary Source="Themes/TextBoxTheme.xaml" />
+                <ResourceDictionary Source="Themes/TimeBoxTheme.xaml" />
+                <ResourceDictionary Source="Themes/DateBoxTheme.xaml" />
+                <ResourceDictionary Source="Themes/EnterButton.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:SchoolView}">
