@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="My_Tasks.ChangeView.View.CodingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:My_Tasks.ChangeView.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="730">
+    
+    <TextBlock FontSize="30"
+               FontFamily="/Fonts/#Convergence"
+               Text="Coding Tasks"
+               Foreground="#e0515f"
+               Margin="0,10,0,0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"/>
+</UserControl>
